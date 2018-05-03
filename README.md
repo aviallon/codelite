@@ -1,7 +1,7 @@
-What is CodeLite? [![Build Status](https://travis-ci.org/aviallon/codelite.svg?branch=master)](https://travis-ci.org/aviallon/codelite)
+What is CodeLite?
 ====
 
-[![Join the chat at https://gitter.im/eranif/codelite](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/eranif/codelite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/eranif/codelite](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/eranif/codelite?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/aviallon/codelite.svg?branch=master)](https://travis-ci.org/aviallon/codelite)
 
 [CodeLite][1] is a free, open source, cross platform IDE specialized in C, C++, PHP and JavaScript (mainly for backend developers using Node.js) programming languages, which runs best on all major platforms (Windows, macOS and Linux).
 
