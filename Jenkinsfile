@@ -9,7 +9,7 @@
 
 pipeline {
     agent {
-        docker { image 'aviallon/dockerfiles:codelite' }
+        docker { image 'aviallon/ubuntu16.04:codelite' }
     }
     stages {
         stage('Linux - GCC'){
