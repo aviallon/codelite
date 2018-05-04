@@ -23,4 +23,4 @@ script:
   - cd build
   - cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=DebugFull ..
   - make
-  - sudo makes install
+  - sudo make install

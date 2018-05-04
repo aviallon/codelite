@@ -15,6 +15,7 @@ pipeline {
         stage('Linux - GCC'){
             steps {
                 sh '''
+                echo "Test"
                 rm -rf build
                 mkdir build
                 cd build
