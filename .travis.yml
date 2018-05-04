@@ -2,7 +2,7 @@ os: linux
 dist: trusty
 sudo: required
 before_install:
-  - sudo apt-get install libgtk2.0-dev pkg-config build-essential git cmake libssh-dev libwxbase3.0-dev libsqlite3-dev libwxsqlite3-2.8-dev libwxgtk3.0-dev wx3.0-headers wx-common wx3.0-i18n wx3.0-examples libclang-dev libhunspell-dev lldb-3.4-dev
+  - sudo apt-get install libgtk2.0-dev pkg-config build-essential git cmake libssh-dev libwxbase3.0-dev libsqlite3-dev libwxsqlite3-2.8-dev libwxgtk3.0-dev wx3.0-headers wx-common wx3.0-i18n wx3.0-examples libclang-dev libhunspell-dev lldb-3.5-dev
 
 
 # Enable C++ support
@@ -12,11 +12,15 @@ cache: ccache
 # Compiler selection
 compiler:
   - gcc
+  
+env:
+  global:
+    - MAKEFLAGS="-j 4"
 
 # Build steps
 script:
   - mkdir build
   - cd build
   - cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release ..
-  - make -j8
-  - sudo make -j4 install
+  - make
+  - sudo makes install
