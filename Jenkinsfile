@@ -9,17 +9,19 @@
 
 pipeline {
     agent {
-        docker { image 'aviallon/ubuntu16.04:codelite' }
+        docker { image 'codelite:latest' }
     }
     stages {
         stage('Linux - GCC'){
             steps {
                 sh '''
+                mkdir -p ~/.ccache/tmp
                 rm -rf build
                 mkdir build
                 cd build
+                export PATH=/usr/lib/ccache:$PATH
                 cmake -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=DebugFull ..
-                make -j4
+                make -j6
                 '''
             }
         }
